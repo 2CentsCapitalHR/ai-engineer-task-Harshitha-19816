@@ -1,1 +1,70 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/vgbm4cZ0)
+ADGM Corporate Agent: Document Intelligence Project
+This project is an AI-powered legal assistant designed to review and validate legal documents for business incorporation and compliance within the Abu Dhabi Global Market (ADGM) jurisdiction.
+
+Key Features
+Document Upload: Accepts .docx files for review.
+
+Document Intelligence: Automatically checks uploaded documents against a predefined checklist for a specific legal process.
+
+Red Flag Detection: Uses a Large Language Model (LLM) with a Retrieval-Augmented Generation (RAG) system to identify legal inconsistencies and non-compliance based on ADGM regulations.
+
+Inline Commenting: Inserts contextual comments directly into the .docx file for flagged content.
+
+Structured Report: Generates a detailed JSON report summarizing all findings.
+
+Technical Stack
+UI Framework: Streamlit
+
+Core Logic: Python
+
+LLM Integration: LangChain
+
+Language Model: Google Gemini (via langchain_google_genai)
+
+Document Processing: python-docx
+
+Environment Management: python-dotenv
+
+Setup and Installation
+Clone the Repository
+
+git clone YOUR_GITHUB_REPO_URL
+cd your-repo-name
+
+Set up the Python Environment
+Ensure you have Python 3.10 or higher installed. Then, install the required packages:
+
+pip install -r requirements.txt
+
+Configure API Key
+
+Obtain a Gemini API key from Google AI Studio.
+
+Create a file named .env in the project's root directory.
+
+Add your API key to the file in the following format:
+
+GOOGLE_API_KEY="your_secret_api_key_here"
+
+Add Reference Documents
+Place all your ADGM reference documents (in .docx format) into the adgm_docs/ folder.
+
+Run the Application
+
+streamlit run app.py
+
+This will launch the application in your default web browser.
+
+Project Status & Technical Notes
+This application is fully functional and successfully implements all core features. The agent is built on the Google Gemini API's free tier. Due to daily usage limits, you may occasionally encounter a 429 Quota Exceeded error if the API request limit is reached. This is a normal technical limitation of the free service, and the code is designed to handle API requests correctly. The enclosed example files demonstrate the application's successful output.
+
+Submission Checklist
+[x] GitHub repository link with the codebase.
+
+[x] README.md file with setup instructions.
+
+[x] One example document (.docx) before and after review.
+
+[x] Generated structured output file (JSON).
+
+[ ] Screenshot or demo video of the working application.
